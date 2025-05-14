@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Web Project</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1 id="main-header">Let's have some fun!</h1>
+        <p>Explore all the interactive features below!</p>
+    </header>
+
+    <section class="section" id="event-handling">
+        <h2>Event Handling 🎈</h2>
+        
+        <div class="card">
+            <h3>Button Click</h3>
+            <button id="click-button">Click Me!</button>
+            <p id="click-counter">Clicked 0 times</p>
+            <p id="fun-fact"></p>
+        </div>
+        
+        <div class="card hover-card">
+            <h3>Hover Effects</h3>
+            <p>Hover over this card to see the effect</p>
+            <div class="thumbnail-container">
+                <img src="https://images.pexels.com/photos/15286/pexels-photo.jpg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop" alt="Nature" class="thumbnail">
+                <p class="caption">Beautiful nature scenery</p>
+            </div>
+        </div>
+        
+        <div class="card">
+            <h3>Keypress Detection</h3>
+            <p>Try pressing arrow keys or type the Konami code: ↑↑↓↓←→←→BA</p>
+            <div id="keypress-display"></div>
+            <div id="konami-message" class="hidden">You found the easter egg! 🎉</div>
+        </div>
+        
+        <div class="card">
+            <h3>Secret Actions</h3>
+            <p>Double click the header or long press this section (3 seconds)</p>
+            <div id="secret-message" class="hidden">Secret message revealed!</div>
+        </div>
+    </section>
+
+    <section class="section" id="interactive-elements">
+        <h2>Interactive Elements 🎮</h2>
+        
+        <div class="card">
+            <h3>Color Changing Button</h3>
+            <button id="color-changer">Click to Change Color</button>
+        </div>
+        
+        <div class="card">
+            <h3>Image Gallery</h3>
+            <div class="gallery">
+                <img id="main-image" src="https://images.pexels.com/photos/3408744/pexels-photo-3408744.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop" alt="Northern Lights">
+                <div class="thumbnail-strip">
+                    <img src="https://images.pexels.com/photos/3408744/pexels-photo-3408744.jpeg?auto=compress&cs=tinysrgb&w=80&h=60&fit=crop" alt="Northern Lights" class="gallery-thumb">
+                    <img src="https://images.pexels.com/photos/624015/pexels-photo-624015.jpeg?auto=compress&cs=tinysrgb&w=80&h=60&fit=crop" alt="Forest" class="gallery-thumb">
+                    <img src="https://images.pexels.com/photos/3225517/pexels-photo-3225517.jpeg?auto=compress&cs=tinysrgb&w=80&h=60&fit=crop" alt="Mountain" class="gallery-thumb">
+                    <img src="https://images.pexels.com/photos/572897/pexels-photo-572897.jpeg?auto=compress&cs=tinysrgb&w=80&h=60&fit=crop" alt="Ocean" class="gallery-thumb">
+                </div>
+            </div>
+        </div>
+        
+        <div class="card">
+            <h3>Accordion FAQ</h3>
+            <div class="accordion">
+                <div class="accordion-item">
+                    <button class="accordion-button">What is this project about? <span class="chevron">▼</span></button>
+                    <div class="accordion-content">
+                        <p>This project demonstrates various interactive web features including event handling, interactive elements, and form validation.</p>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-button">How do I use it? <span class="chevron">▼</span></button>
+                    <div class="accordion-content">
+                        <p>Just interact with the different elements on the page to see them in action!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="form-validation">
+        <h2>Form Validation 📋✅</h2>
+        <form id="registration-form">
+            <div class="form-group">
+                <label for="username">Username*</label>
+                <input type="text" id="username" required>
+                <span class="validation-icon"></span>
+                <span class="error-message">Username is required</span>
+            </div>
+            
+            <div class="form-group">
+                <label for="email">Email*</label>
+                <input type="email" id="email" required>
+                <span class="validation-icon"></span>
+                <span class="error-message">Valid email is required</span>
+            </div>
+            
+            <div class="form-group">
+                <label for="password">Password*</label>
+                <input type="password" id="password" required>
+                <button type="button" id="toggle-password">👁️</button>
+                <span class="validation-icon"></span>
+                <div class="password-strength">
+                    <div class="strength-meter"></div>
+                    <span class="strength-text">Password Strength</span>
+                </div>
+                <ul class="password-rules">
+                    <li data-rule="length">Minimum 8 characters</li>
+                    <li data-rule="number">Contains a number</li>
+                    <li data-rule="special">Contains a special character</li>
+                </ul>
+            </div>
+            
+            <button type="submit" id="submit-btn">Register</button>
+        </form>
+    </section>
+
+    <footer id="main-footer">
+        <p>Interactive Web Project © 2023</p>
+    </footer>
+
+    <div id="confetti-container"></div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
